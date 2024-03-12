@@ -1,5 +1,6 @@
 void main(){
-  final Hero wolverine = Hero('Logan', 'regeneración');
+  final Hero wolverine = Hero(name:'Logan', power: 'regeneración');
+  print(wolverine.toString());
   print(wolverine.name);
   print(wolverine.power);
 }
@@ -16,6 +17,14 @@ class Hero{
   //   }
 
  //? constructor de una linea
-  Hero(this.name, this.power);
+  Hero({
+    required this.name,
+    this.power = 'sin poder',
+  });
+
+  @override
+  String toString(){
+    return '$name - $power';
+  }
 
 }
