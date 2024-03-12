@@ -1,20 +1,19 @@
 void main(){
-  final Map<String, dynamic>pokemon = { // is a map, is as an object in js
-    "name":"Ditto",
-    "hp": 100,
-    "isAlive": true,
-    "abilities": <String>["impostor"],
-    "sprits":{
-      1: "ditto/front.png",
-      2: "ditto/back.png",
-    }
 
-  };
+final numbers = [1,2,3,4,5,5,5,4,8,9,9,10];
 
-  // print(pokemon);
-  print("Name: ${pokemon["name"]}");
-  print("Sprits: ${pokemon["sprits"]}");
+print("Original List: $numbers");
+print("lenght: ${numbers.length}");
+print("Index 0: ${numbers[0]}");
+print("First: ${numbers.first}");
+print("Reversed: ${numbers.reversed}");
 
-  print("Back: ${pokemon["sprits"][2]}");
-  print("Front: ${pokemon["sprits"][1]}");
+final reversedNumbers = numbers.reversed; // is an iterable
+print("Iterable: ${reversedNumbers}");
+print("List: ${reversedNumbers.toList()}");
+print("Set: ${reversedNumbers.toSet()}");
+
+final numbersFreaterThan5 = numbers.where((num){
+  return num > 5;
+});
 }
