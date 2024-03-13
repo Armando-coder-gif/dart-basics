@@ -11,7 +11,6 @@ void main(){
   );
   print(ironman);
 }
-
 class Hero {
   String name;
   String power;
@@ -20,25 +19,16 @@ class Hero {
   Hero({
     required this.name,
     required this.power,
-    required this.isAlive
+    required this.isAlive,
   });
 
-// otro constructor
-  // Hero.fromJson(Map<String, dynamic> json){
-  //   this.name = json['name']??'no name found';
-  //   this.power = json['power']??'no power found';
-  //   this.isAlive = json['isAlive']??'no isAlive found';
-
-  // }
-  Hero.fromJson(Map<String, dynamic> json){
-    name = json['name']??'no name found';
-    power = json['power']??'no power found';
-    isAlive = json['isAlive']??'no isAlive found';
-
-  }
+  Hero.fromJson(Map<String, dynamic> json)
+      : name = json['name'] ?? 'no name found',
+        power = json['power'] ?? 'no power found',
+        isAlive = json['isAlive'] ?? false;
 
   @override
-  String toString(){
-    return '$name, $power, isAlive: ${isAlive ? 'Yes':'No'}';
+  String toString() {
+    return '$name, $power, isAlive: ${isAlive ? 'Yes' : 'No'}';
   }
 }
