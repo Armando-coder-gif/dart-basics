@@ -19,7 +19,7 @@ class Hero{
  //? constructor de una linea
   Hero({
     required this.name,
-    this.power = 'sin poder',
+    this.power = 'sin poder'
   });
 
   @override
